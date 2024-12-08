@@ -21,6 +21,39 @@ This project is your go-to tool for managing library resources effortlessly. Wit
 2. **Navigate to the project directory** in your terminal:
 
 ```bash
-cd Inventory_management_system
+git clone https://github.com/Haikumma/Library_Management_System.git
+```
+3. **Run the project** with this command:
+```bash
+python main.py
+```
 
+---
+### **💖 How to Use the API**
+
+Let’s dive into the magic! ✨
+
+- **📖 Books Management**:  
+  - Add, edit, or delete books  
+  - Search and view your favorite titles  
+
+- **👩‍💻 User Management**:  
+  - Register, update, or remove users  
+  - View all wonderful library members  
+
+- **📦 Checkout & Return**:  
+  - Borrow books and link them to users  
+  - Return books and track their availability  
+
+- **📚 Available Books**:  
+  - Check which books are free for borrowing!  
+
+Feel free to use Postman or connect the API to your frontend for a seamless library experience! 💖
+---
+### **🪄 License**
+This project is under the **MIT License**.  
+Feel free to **use**, **modify**, and **share** it however you like! ✨
+---
+### 💻**Tech Used**
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
