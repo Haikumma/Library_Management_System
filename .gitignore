@@ -2,8 +2,8 @@
 __pycache__/
 .env
 *.sqlite3
-/library_management_system/
+
 /venv/
 /media/
 /static/
-/library/
+
