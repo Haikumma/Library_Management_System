@@ -86,9 +86,9 @@ Let’s dive into the magic! ✨
 ```
 ---
 ### **🌸 Additional Features**
-  -**Books Management**: Add, edit, or delete books and search for your favorite titles.
-  -**User Management**: Register, update, or remove users and view all library members.
-  -**Checkout & Return**: Borrow books and link them to users, then return them and track their availability.
+  -**Books Management**: Add, edit, or delete books and search for your favorite titles.<br/>
+  -**User Management**: Register, update, or remove users and view all library members.<br/>
+  -**Checkout & Return**: Borrow books and link them to users, then return them and track their availability.<br/>
   -**Available Books**: Check which books are available for borrowing.
 ---
 ### **💖 How to Connect with Frontend or Use Postman**
