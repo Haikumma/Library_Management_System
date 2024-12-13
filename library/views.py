@@ -1,30 +1,21 @@
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-import json
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from .models import Book
-from django.http import HttpResponse
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def get_books(request):
-    if request.method == 'GET':
-        books = list(Book.objects.all().values())
-        return JsonResponse(books, safe=False)
+    books = list(Book.objects.all().values())
+    return JsonResponse(books, safe=False)
 
-@csrf_exempt  # Exempting CSRF protection for this view
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def add_book(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        book = Book.objects.create(
-            title=data['title'],
-            author=data['author'],
-            availability=True
-        )
-        return JsonResponse({
-            "id": book.id,
-            "title": book.title,
-            "author": book.author,
-            "availability": book.availability
-        })
+    title = request.data.get('title')
+    author = request.data.get('author')
+    if not title or not author:
+        return JsonResponse({'error': 'Title and author are required.'}, status=400)
 
-def home(request):
-    return HttpResponse("Welcome to the Library Management System!")
-
+    book = Book.objects.create(title=title, author=author, availability=True)
+    return JsonResponse({'id': book.id, 'title': book.title, 'author': book.author, 'availability': book.availability})
